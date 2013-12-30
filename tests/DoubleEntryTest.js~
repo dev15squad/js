@@ -2,7 +2,7 @@ module("DoubleEntry");
  
 test("validate Node created", function() {
 	var sourceValue = "12345";
-	insertDoubleField( "name\\.lastName", sourceValue );	
+	insertDoubleField( "name.lastName", sourceValue );	
 	var initChildrenCount = $("#superParent" ).children().length;
 	equal( initChildrenCount, 3,  "Incorrect divs inserted. No insert double" );
 	notEqual( sourceValue, $("doubleEntryField").data("targetValue"), "Target Value not set" );

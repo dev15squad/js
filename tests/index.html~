@@ -24,5 +24,21 @@
       <!-- any HTML you want to be present in each test (will be reset for each test) -->
  
     </div>
+	<table>
+		<tbody>
+			<tr>
+				<td id="superParent" >
+					<div> A label
+					</div>
+					<div id="parent" >The input field 
+						<input id="name.lastName" name="name.lastName" />
+					</div>
+					<div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
   </body>
 </html>

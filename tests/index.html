@@ -7,23 +7,36 @@
       <title>jQuery.simpleFAQ QUnit Test Runner</title>
  
       <link rel='stylesheet' href='css/qunit-1.12.0.css'>
- 
-      <script src='lib/jquery-1.10.2.min.js'></script>
-      <script src='lib/jquery.validate.js'></script>
-      <script src='lib/qunit-1.12.0.js'></script>
-
-      <script src='DoubleEntryTest.js'></script>
+      <!-- The JS source code to be TESTED -->
       <script src='../src/DoubleEntry.js'></script>
 
+      <!-- add any external libraries your code needs -->
+      <script src='lib/jquery-1.10.2.min.js'></script>
+      <script src='lib/qunit-1.12.0.js'></script>
+ 
+      <!-- your tests, any and all to run with the given fixtures below -->
+      <script src='DoubleEntryTest.js'></script>
+ 
   </head>
   <body>
-    <div id="qunit"></div>
-    <div id='qunit-fixture'></div>
-	<form>
-		<div id="oneParentDiv" >
-			<div id="oneDiv1"> <input name=oneField1 id=oneField1 type=text /></div>
-			<div id="oneDiv2"> <input name=oneField2 id=oneField2 type=text /></div>
-		</div>
-	</form>
+    <div id="qunit"></div> <!-- QUnit fills this with results, etc -->
+    <div id='qunit-fixture'>
+      <!-- any HTML you want to be present in each test (will be reset for each test) -->
+ 
+    </div>
+	<table>
+		<tbody>
+			<tr>
+				<td id="superParent" >
+					<div> A label
+					</div>
+					<div id="parent" >The input field 
+						<input id="name.lastName" name="name.lastName" />
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
   </body>
 </html>
