@@ -10,7 +10,7 @@ test("validate Node created", function() {
 	// replicate the onkeydown event
 	$("#doubleEntryField").val( sourceValue );
 	$("#doubleEntryField").keyup();
-	var initChildrenCount = $("#superParent" ).children().length;
+	initChildrenCount = $("#superParent" ).children().length;
 	equal( initChildrenCount, 2,  "double entry field should have been removed" );
 });
 
