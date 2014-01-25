@@ -14,3 +14,18 @@ test("validate Node created", function() {
 	equal( initChildrenCount, 2,  "double entry field should have been removed" );
 });
 
+test( "using mockito and jshamcrest library", function(){
+	equal( true, true );
+
+	getName = mockFunction();
+	//when( getName )().then( function(){ return "From a mock!"; } );
+
+	when( getName )().then( function(){ return "This is a number !"; } );
+
+	executeLogic();
+	verify( getName )( 2 );
+	verify( getName )( 1 );
+	assertThat( "x", equalTo( "x" ) );
+
+});
+
