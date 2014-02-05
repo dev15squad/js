@@ -11,8 +11,13 @@ module.exports = function(grunt) {
       		all: ['tests/*.html']
     	},
 	 watch: {
-    		files: ['tests/*.js', 'tests/*.html', 'src/*.js'],
-    		tasks: ['qunit', 'sync:main' ]
+    		files: [
+			'tests/*.js', 
+			'tests/*.html', 
+			'specs/*.js', 
+			'src/*.js'
+			],
+    		tasks: ['jasmine', 'sync:main' ]
   	},
 	sync: {
 		main: {
@@ -21,7 +26,14 @@ module.exports = function(grunt) {
 			  dest: 'bin/',
 			}]
 		}
+	},
+	jasmine : {
+		src : 'src/**/*.js',
+		options : {
+			specs : 'specs/**/*.js'
+		}
 	}
+
   });
 
 	// load up your plugins
@@ -33,5 +45,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-sync');
   	grunt.registerTask('default', 'sync');
+
+
+	// Register tasks.
+	grunt.loadNpmTasks('grunt-contrib-jasmine');
+
+
 };
 
